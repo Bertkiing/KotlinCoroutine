@@ -35,8 +35,8 @@ fun main() = runBlocking{
     }
 
     delay(1300L)
-    println("cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.main: I'm tired of waiting ! ")
+    println("cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.coroutineContextAndDispatchers.main: I'm tired of waiting ! ")
     job.cancelAndJoin()
-    println("cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.main:Now I 'm quit safely...")
+    println("cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.coroutineContextAndDispatchers.main:Now I 'm quit safely...")
 
 }
