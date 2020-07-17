@@ -17,7 +17,7 @@ import kotlinx.coroutines.runBlocking
  * (即使在单线程的分配器中,也可能很难确定协程正在做什么,在哪里以及什么时间)
  *
  * 解决办法:
- * The common approach to debugging applications with threads is to print the thread name in the coroutineContextAndDispatchers.log file on each coroutineContextAndDispatchers.log
+ * The common approach to debugging applications with threads is to print the thread name in the coroutineContextAndDispatchers.FlowsBasic.log file on each coroutineContextAndDispatchers.FlowsBasic.log
  * statement.The feature is universally supported by logging frameworks.
  * (常见方案是Debug应用的线程,在每个日志文件中打印线程名称,这个特性通常被日志框架所支持)
  *  When using coroutines, the thread name alone does not

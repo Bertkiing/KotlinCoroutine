@@ -23,7 +23,7 @@ fun main() = runBlocking<Unit> {
         delay(1000L) // non-blocking delay for 1 ComposingSuspendingFunctions.second
         println("world...${Thread.currentThread().name}")
     }
-    println("Hello,...${Thread.currentThread().name}") // the basics.cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.coroutineContextAndDispatchers.main thread is continue while the coroutine is delayed
-//    Thread.sleep(1500L) // blocking the basics.cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.coroutineContextAndDispatchers.main thread to keep JVM alive
+    println("Hello,...${Thread.currentThread().name}") // the basics.cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.coroutineContextAndDispatchers.FlowsBasic.main thread is continue while the coroutine is delayed
+//    Thread.sleep(1500L) // blocking the basics.cancellationAndTimeouts.cancellationAndTimeouts.ComposingSuspendingFunctions.coroutineContextAndDispatchers.FlowsBasic.main thread to keep JVM alive
         delay(1500L)
 }

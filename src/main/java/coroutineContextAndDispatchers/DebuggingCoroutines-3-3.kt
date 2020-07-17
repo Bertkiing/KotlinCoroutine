@@ -13,7 +13,7 @@ import kotlinx.coroutines.runBlocking
  *
  * 为了Debug方便,我们可以给协程命名(CoroutineName)
  *
- * Automatically assigned ids are good when coroutines coroutineContextAndDispatchers.log often and you just need to correlate coroutineContextAndDispatchers.log records coming from
+ * Automatically assigned ids are good when coroutines coroutineContextAndDispatchers.FlowsBasic.log often and you just need to correlate coroutineContextAndDispatchers.FlowsBasic.log records coming from
  * the same coroutine.
  * (当协程经常输出日志,自动分配ID是非常好的,我们只需要关联来自同一协程的日志记录.)
  *
@@ -27,8 +27,8 @@ import kotlinx.coroutines.runBlocking
  * CoroutineName ---> AbstractCoroutineContextElement -->Element ---> CoroutineContext
  *
  */
-fun main() = runBlocking(CoroutineName("coroutineContextAndDispatchers.main")) {
-    log("Started coroutineContextAndDispatchers.main coroutine")
+fun main() = runBlocking(CoroutineName("coroutineContextAndDispatchers.FlowsBasic.main")) {
+    log("Started coroutineContextAndDispatchers.FlowsBasic.main coroutine")
     // run two background value computations
     val v1 = async(CoroutineName("v1coroutine")) {
         delay(500)

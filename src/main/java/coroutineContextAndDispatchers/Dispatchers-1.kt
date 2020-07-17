@@ -35,10 +35,10 @@ package coroutineContextAndDispatchers
 import kotlinx.coroutines.*
 
 fun main() = runBlocking<Unit> {
-    launch { // context of the parent, coroutineContextAndDispatchers.main runBlocking coroutine
-        println("coroutineContextAndDispatchers.main runBlocking      : I'm working in thread ${Thread.currentThread().name}")
+    launch { // context of the parent, coroutineContextAndDispatchers.FlowsBasic.main runBlocking coroutine
+        println("coroutineContextAndDispatchers.FlowsBasic.main runBlocking      : I'm working in thread ${Thread.currentThread().name}")
     }
-    launch(Dispatchers.Unconfined) { // not confined -- will work with coroutineContextAndDispatchers.main thread
+    launch(Dispatchers.Unconfined) { // not confined -- will work with coroutineContextAndDispatchers.FlowsBasic.main thread
         println("Unconfined            : I'm working in thread ${Thread.currentThread().name}")
     }
     launch(Dispatchers.Default) { // will get dispatched to DefaultDispatcher

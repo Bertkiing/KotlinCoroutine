@@ -20,7 +20,7 @@
 #### 1
 > 可以通过CoroutineName为 协程命名:
 >
-> runBlocking(CoroutineName("main")){...}
+> runBlocking(CoroutineName("FlowsBasic.main")){...}
 #### 2
 > 使用操作符 + 来合并Context element.
 >

@@ -49,13 +49,13 @@ import kotlinx.coroutines.*
 val threadLocal = ThreadLocal<String?>() // declare thread-local variable
 
 fun main() = runBlocking<Unit> {
-    threadLocal.set("coroutineContextAndDispatchers.main")
-    println("Pre-coroutineContextAndDispatchers.main, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")
+    threadLocal.set("coroutineContextAndDispatchers.FlowsBasic.main")
+    println("Pre-coroutineContextAndDispatchers.FlowsBasic.main, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")
     val job = launch(Dispatchers.Default + threadLocal.asContextElement(value = "launch")) {
         println("Launch start, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")
         yield()
         println("After yield, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")
     }
     job.join()
-    println("Post-coroutineContextAndDispatchers.main, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")
+    println("Post-coroutineContextAndDispatchers.FlowsBasic.main, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")
 }
